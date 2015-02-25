@@ -110,9 +110,9 @@
 - (void)vkSdkNeedCaptchaEnter:(VKError *)captchaError;
 {
     UIViewController *rootViewController = [UIApplication sharedApplication].keyWindow.rootViewController;
-
+    UIViewController *presentedVC = [rootViewController presentedViewController];
     VKCaptchaViewController *viewController = [VKCaptchaViewController captchaControllerWithError:captchaError];
-    [viewController presentIn:rootViewController];
+    [viewController presentIn:(presentedVC ? presentedVC : rootViewController)];
 }
 
 - (void)vkSdkUserDeniedAccess:(VKError *)authorizationError
@@ -128,7 +128,8 @@
 - (void)vkSdkShouldPresentViewController:(UIViewController *)controller
 {
     UIViewController *rootViewController = [UIApplication sharedApplication].keyWindow.rootViewController;
-    [rootViewController presentViewController:controller animated:YES completion:nil];
+    UIViewController *presentedVC = [rootViewController presentedViewController];
+    [(presentedVC ? presentedVC : rootViewController) presentViewController:controller animated:YES completion:nil];
 }
 
 - (void)vkSdkTokenHasExpired:(VKAccessToken *)expiredToken
