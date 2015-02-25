@@ -1,19 +1,20 @@
 {
   "name": "LetMeAuth-VkontakteSDK-iOS",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "authors": {
     "Evgeniy Yurtaev": "evgeniyyurt@gmail.com",
-    "Alexey Aleshkov": "djmadcat@gmail.com"
+    "Alexey Aleshkov": "djmadcat@gmail.com",
+    "Valentine Silvansky" : "v.silvansky@gmail.com"
   },
   "license": {
     "type": "BSD",
     "file": "LICENSE"
   },
   "summary": "Let Me Auth! Vkontakte authorization provider based on official Vkontakte SDK",
-  "homepage": "https://github.com/webparadox/LetMeAuth-VkontakteSDK-iOS",
+  "homepage": "https://github.com/silvansky/LetMeAuth-VkontakteSDK-iOS",
   "source": {
-    "git": "https://github.com/webparadox/LetMeAuth-VkontakteSDK-iOS.git",
-    "tag": "2.0.0"
+    "git": "https://github.com/silvansky/LetMeAuth-VkontakteSDK-iOS.git",
+    "tag": "2.0.1"
   },
   "platforms": {
     "ios": "6.0"
